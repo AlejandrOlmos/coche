@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>APIs de JavaScript</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device.width">
+        
+    </head>
+    <body>
+        <h1>APIs</h1>
+        
+        <p>Con la apariciòn de HTML5 el desarrollo de los dispositivos mòviles con mejores capacidades se han desarrollado de distintas
+            herramientas que nos ayudan a explotar el funcinamiando de las aplicaciones con distintos recursos de hardware y software. </p>
+        
+        <p>Sin embargo, la mayor desventaja de las APIs es el soporte que se da a estas nuevas tecnologìas por parte de los navegadores,
+            que muchas veces suele ser lento o completamente nulo.</p>
+        
+        <p>Algunas de las herramientas ùtiles que estàn orientadas a las tecnologìas mòviles son las APIs de: Vibraciòn, geolocalizaciòn 
+            almacenamiento local, funcionalidad OFFline, streaming en càmara, etc. </p>
+        
+        <p>Almacenamiento local</p>
+        <p>Una de las caracterìsticas màs interesantes de las nuevas herramientas de desarrollo es la que nos permite almacenar informaciòn 
+            dentro del navegador. Cuando escribimos una aplicacioòn web utilizamos tecnologìas de almacenamiento de datos que conmute se guardan en un servior de Base de datos. Sin embargo, si la aplicacioòn se encuentra offline, estos datos que estàn guardados en algìn servidor en internet no se encuentran disponibles. Debido a esto, se desarrllò una tecnologìa de llamada LocalStorage y SessionStorage que permite almacenar infomraciòn de manera permanente en el navegador.</p>
+        
+        <p>La sintaxis del almacenamiento local es bastante sencilla. Primeramente debemos acceder a la funciòn llamada localStorage, despuès       utilizamos algùn mètodo para indicar la acciòn que queremos llevar a cabo sobre el almacenamiento local. Finalmente, la asignaciòn de un valor funciona con un emparejado a una llave, esto quiere decir, logueamos un valor a una llave o nombre de variable.</p>
+        
+        <p><i>localStorage.setItem('nombre','Eduardo')</i></p>
+        <button onclick="guardar()">Guardar</button>
+        
+        <script>
+            function guardar(){
+                dato=document.getElementById('dato').value;
+                //Almacenamiento LOCAL
+                
+                localStorage.setItem('datoGuardado',dato);
+                alert('Dato Guardado Exitosamente! :D')
+            }
+            function verDato(){
+                dato = localStorage.getItem('datoGuardado');
+                alert('El dato guardado es: '+ dato);
+            }
+        </script>
+        <h2>API de Vibracion</h2>
+        <p>Una de las herramientas nuevas está completamente orientada a dispositivos que cuenten con el hardware necesario para poder hacer vibrar el dispositivo. La mayoría de los dispositivos que tienen soporte para este tipo de hardware son móviles, </p>
+    </body>
+</html>
